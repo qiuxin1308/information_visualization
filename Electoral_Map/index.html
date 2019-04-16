@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization - Homework 5</title>
+    <script src='https://d3js.org/d3.v4.js'></script>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.9.0/d3-legend.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+
+<h1>US Presidential Elections from 1940 to 2016</h1>
+<p class="info">Name: Xin Qiu; E-Mail: qiu.xin@wustl.edu; UID: 458829</p>
+
+<div id="year-chart" class="view">
+</div>
+<!-- <div id = "shiftChart" class = "view"></div> -->
+<div id="mainDiv">
+  <div id="leftDiv">
+      <div id = "electoral-vote" class = "view"></div>
+      <div id = "votes-percentage" class = "view"></div>
+      <div id = "titleChart" class = "view">
+        <div id="legend" class = "view"></div>
+        <div id = "titles" class = "view"></div>
+      </div>
+  </div>
+  <div id="rightDiv">
+      <h4 style="padding-left: 0px;">Brush selection is:</h4>
+      <div id="brushedStates">
+        <!-- <div id="stateName"></div>
+        <div id="theShiftChart"></div> -->
+      </div>
+  </div>
+</div>
+
+<script type="application/javascript" src="public/js/yearChart.js"></script>
+<script type="application/javascript" src="public/js/electoralVoteChart.js"></script>
+<script type="application/javascript" src="public/js/titleChart.js"></script>
+<script type="application/javascript" src="public/js/votePercentageChart.js"></script>
+<script type="application/javascript" src="public/js/shiftChart.js"></script>
+<script type="application/javascript" src="public/js/main.js"></script>
+
+</body>
+</html>

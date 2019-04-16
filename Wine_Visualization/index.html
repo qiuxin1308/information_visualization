@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wine Visualization</title>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/queue.v1.min.js"></script>
+	<script src="https://d3js.org/topojson.v1.min.js"></script>
+	<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+	<script src="https://d3js.org/d3-format.v1.min.js"></script>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Aleo|Titillium+Web|Acme|Lato|Montserrat:700" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="wine_icon.ico">
+</head>
+<body>
+	<div id="title"></div>
+	
+	<!-- <a href="processbook.html">Process Book</a> -->
+	<div id="containter" class="view">
+		<div id="left_side" class="view"></div>
+		<div id="content" class="view">
+			<div id="producer_part" class="view">
+				<div id="world_map" class="view"></div>
+			</div>
+			<div id="trade_part" class="view">
+				<div id="trade_title"></div>
+				<div id="imex_btn" class="view"></div>
+				<div id="trade_viewAll" class="view">
+					<div id="trade_view" class="view"></div>
+					<div id="trade_legend" class="view"></div>
+				</div>
+				<div id="trade_charts" class="view">
+					<div id="trade_barChart"></div>
+					<div id="trade_aster">
+						<div id="leftarrow">
+							<br><br><br><br><br><br><br><br><br><br><br><br>
+							<p><i id="arrow"></i>  Click left bars to see the details</p>
+						</div>
+						<div id="asterView"></div>
+						<div id="asterLegend"></div>
+					</div>
+				</div>
+			</div>
+			<div id="analysis_part" class="view">
+				<div id="top_selection"></div>
+				<div id="analysis_charts">
+					<!-- <div id="analysisTitle"></div> -->
+					<div id="bubble_content">
+							<div id="analysisTitle"></div>
+							<div id="bubble_chart" class="view"></div>
+							<div id="analysis_button" class="view"></div>
+					</div>
+					<div id="pr_charts" class="view">
+						<div id="the_leftarrow">
+							<br><br><br><br><br><br><br><br><br><br><br><br>
+							<p><i id="the_arrow"></i>  Click left bubbles to see the details</p>
+						</div>
+						<div id="percentage_chart" class="view"></div>
+						<div id="ranking_content">
+							<div id="ranking_title" ></div>
+							<div id="ranking_chart" class="view"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Visualization objects -->
+	<script src="public/js/buttonselection.js"></script>
+	<script src="public/js/worldmapvis.js"></script>
+	<script src="public/js/d3-multichord.js"></script>
+	<script src="public/js/tradevis.js"></script>
+	<script src="public/js/exportsvis.js"></script>
+	<script src="public/js/importsvis.js"></script>
+	<!-- <script src="public/js/piepercentagevis.js"></script> -->
+	<script src="public/js/usamapvis.js"></script>
+	<script src="public/js/ranking_chart.js"></script>
+	<script src="public/js/percentagevis.js"></script>
+	<script src="public/js/barinexvis.js"></script>
+	<script src="public/js/analysisvis.js"></script>
+	<script src="public/js/bubblevis.js"></script>
+	<script src="public/js/analysisbutton.js"></script>
+	<!-- Load data, create visualizations -->
+	<script src="public/js/main.js"></script>
+</body>
+</html>

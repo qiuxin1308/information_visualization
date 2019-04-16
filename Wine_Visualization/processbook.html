@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Process Book</title>
+    <link rel="stylesheet" href="public/css/processbook.css"/>
+</head>
+<body>
+    <div id="processhead">
+        <h1>Process Book</h1>
+        <h3> Sakura Team</h3>
+        <p>Xin Qiu 458829</p>
+        <p>Xuanfan Wu 459622</p>
+        <p>Project Link:<a href="https://washuvis.github.io/wine/">https://washuvis.github.io/wine/</a></p>
+    </div>
+    <br>
+    <br>
+    <div id="overview">
+        <h3>Overview and Motivation</h3>
+        <p>Wine has, more than any other drink, the ability to imbue its consumer with pleasure by the senses of sight, smell, taste and touch like no other drink. Wine is always attractive and popular to most people. However, how to choose a wine suitable and taste good is always a big challenge to people, especially to beginners. What we want to do is help user to know about the basic information about wine such as which wine is evaluated the best and which region or which brand produces the best wine.</p>
+    </div>
+    <div id="related">
+        <h3>Related Work</h3>
+        <ul>
+            <li><a href="https://wustl.instructure.com/courses/2644/discussion_topics/4222">Chart Junk</a><br>
+                We inspired from this reading and use various charts to make user understand the information clearly. 
+            </li>
+            <li><a href="https://wustl.instructure.com/courses/2644/discussion_topics/10455">Evaluation</a><br>
+            we inspired from this reading and use as little words as we can. We design more charts to provide wine informatino to users.</li>
+        </ul>
+    </div>
+    <div id="questions">
+        <h3>Questions</h3>
+        <ol>
+            <li>Which country produces the most types of wine?</li>
+            <li>How about wine trade between these countries?</li>
+            <li>Which region produces highest scores/price/value of wine?</li>
+            <li>Which is the highest scores/cheapest/most expensive/best value wine in a specific region?</li>
+        </ol>
+    </div>
+    <div id="data">
+        <h3>Data</h3>
+        <div id="dataset1">
+            <p>
+                DataSet1: wine review<br>
+                link:<a href=" https://www.kaggle.com/zynicide/wine-reviews">data_review</a> and our secound data <a href="http://www.worldstopexports.com">http://www.worldstopexports.com</a><br>
+                This dataset contains about 130,000 wine information including country, description,score，orice, province,region,name, taster and so on.
+            </p>
+            <div id="dataset2">
+                <p>
+                    Dataset2: wine trade<br>
+                    link:<a href="http://www.worldstopexports.com">http://www.worldstopexports.com</a><br>
+                    this dataset contains the main wine export and import countries and and trade amount between these countries. 
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div id="data exploratory">
+        <h3>Data Exploratory</h3>
+        <p>
+                After cleaning the dataset1, we keep 99882 wine information. We do some aggregate work and group them by country. Finally,we found that all these wine information are from 7 countries.
+                <table>
+                        <thead>
+                            <tr>
+                                <th>country</th>
+                                <th>number of wine</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Argentina</td>
+                                <td>3211</td>
+                            </tr>
+                            <tr>
+                                <td>Australia</td>
+                                <td>2082</td>
+                            </tr>
+                            <tr>
+                                <td>Canada</td>
+                                <td>256</td>
+                            </tr>
+                            <tr>
+                                <td>France</td>
+                                <td>21,351</td>
+                            </tr>
+                            <tr>
+                                <td>Italy</td>
+                                <td>19382</td>
+                            </tr>
+                            <tr>
+                                <td>Spain</td>
+                                <td>6502</td>
+                            </tr>
+                            <tr>
+                                <td>US</td>
+                                <td>54,226</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    According to the data, we decide to pay the most attentin to the wine of USA since there are half data is from USA. We then group the wine in one country by state/province and get the statistic data of wine in each state. We plan to add more aggregate data such as mean score/ mean price of wine in each state to fit our request. But now, we only need the number of wine in each state.<br>
+                    From the second dataset, we get the trade data from countries and import and export data.
+        </p>
+        <p>
+            For now we have following data files:
+            <ul>
+                <li>
+                    <p>map data<br>
+                    example: world_contries.json, map-USA.json<br>
+                    this kind of data is for map generation which</p>
+                </li>
+                <li>
+                    <p>regions of each countries<br>
+                    example:USA_region.tsv, CountryID_region.tsv<br>
+                    These data is for us to do the analysis for each country, we want to analyze and rank the wine of each state in specific country. For now, it only contains the number of wine in each state/province. We plan to do more aggregate calculation to get more data such as the mean point, mean price of wine to fit our request.But now, we only need number of wine to do visualization.</p>
+                </li>
+                <li>
+                    <p>wine information in each country<br>
+                    example:CountryID.json<br>
+                    These file contains the detail information to each wine in the specific country. We keep all the information we need for the analysis to these wine</p>
+                </li>
+                <li>
+                    <p>wine trade data<br>
+                    example: wine_export.csv<br>
+                    We get this file from our second dataset which is for visualization of wine trade</p>
+                </li>
+            </ul>
+        </p>
+        
+
+            
+    </div>
+    <div id="design evolution">
+        <h3>Design Evolution</h3>
+        After countinue update, we finally focus on two point:<br>
+        <ol>
+            <li>User can see all the graph in one screen without scrolling down.<br>
+                we change our design multiple times to make sure that our user will not ignore all the graphs.<br>
+                To ensure that, we make all the graph in one 100% screen, and add a lot of tip to guide user to use our website.
+            </li>
+            <li>All the graph in one section has interaction.<br>
+                In each section, We make sure that all the praphs has strong interaction so that user can see the update of these graphs if they click the button or the bar.
+            </li>
+        </ol>
+    </div>
+    <div id="implementation"></div>
+        <h3>Implementation</h3>
+        <div id="left selection">
+            <h4>1.Left Side Selection Part</h4>
+            We seperate all our visualization into three parts: "Producer", "Trade" and "Wine Analysis in Countries".<br>
+            To make sure all the graphs could be put in suitable place and user will not ignore any of them, we set three section.<br>
+            User could use button on the left side to access different section<br>
+            <img src="picture/left-side.png" height="360" width="200">
+        </div>
+        <div id="world map">
+            <h4>2.Producer Section</h4>
+            The Producer part is a world map and 
+            we use world map to display which country produces the larger amount of types of wine with darker color or the vice versa.<br>
+            When a user moves the mouse over a country, a tooltip will display the country name and the total wine types in this country.<br>
+            <img src="picture/world_map_graph.png" height="360" width="640">
+        </div>
+        <div id="export-import chart">
+            <h4>3.Trade Section</h4>
+            From the world map and the pie chart, users can easily understand which country produces the largest amount of wine, so we want to present whether these countries also has largest export of wine or import of wine. This chart can make users know how much a country earn profits from the export of wine and how much a country spends on the import of wine.<br>
+            <img src="picture/export_import.png" height="360" width="640">
+        </div>
+        <div id="bar chart">
+            <h4>3-1.bar Chart</h4>
+            The bar chart is to show the import/export wine between 2013 and 2017 based on the dataset we have. This chart will tell users about the increment and decrement of wine trade between these countries. And when you click the bars, it will show a pie chart about where the wine (in billions) goes to or comes from. Following is the image to show an example about the bar chart.<br>
+           <!-- we use bar chart to display the percentage of each country's wine. <br> -->
+            <img src="picture/bar_chart.png" height="360" width="400"><br>
+        </div>
+        <div id="pie chart">
+            <h4>3-2.Pie Chart</h4>
+            When users clicking one of the bar in bar chart, it will show up a pie chart on the right side. It will show the percentage of where the wine comes from or goes to in this specific country. So, users can gain some information about the wine trade between these countries.<br>
+            <!-- we use pie chart to display the percentage of each country's wine. <br> -->
+            <img src="picture/pie_chart.png" height="360" width="400"><br>
+        </div>
+        <div id="wine analysis section">
+            <h4>4.Wine Analysis Section</h4>
+           This section is about the detail analysis in each country <br>
+           In this section, we have three graphs with strong interaction<br>
+            <img src="picture/analysis_section.png" height="360" width="600"><br>
+            The relization of interaction among three graphs is using the interaction button at the bottom(Socre, Price and Value)<br>
+            <img src="picture/interaction_button.png" height="100" width="500"><br>
+        </div>
+        <div id="bubble chart">
+            <h4>4-1.Bubble Chart</h4>
+            bubble chart is designed to display the wine information of each state<br>
+            Through the button on the bottom, people could know about the average score, price and value of wine in each state.<br>
+            The size of bubble is related to the value of the state<br>
+            <img src="picture/bubble_chart.png" height="360" width="400"><br>
+        </div>
+        <div id="distribution chart">
+            <h4>4-2.Distribution Chart</h4>
+            Distribution chart is designed to display the score, price, and value distributio in each state. <br>
+            Same, distribution chart will be switched according to the interaction buttons.<br>
+            <img src="picture/distribution.png" height="360" width="500"><br>
+        </div>
+        <div id="top-rank chart">
+            <h4>4-3.Top 3 Rank Chart</h4>
+            Rank chart is designed to display the highest score, price, and value in each state. <br>
+            Same, Rank chart will be switched according to the interaction buttons.<br>
+            <img src="picture/ranking.png" height="360" width="640"><br>
+        </div>
+    <div id="evaluation">
+        <h3>Evaluation</h3>
+        <ul>
+            <li>
+                <h4>Learn From Data through Visualization</h4>
+                Through our visualization: we know about a lot of detail information about wine such as the wine pruduce of each country, the trade between different country and average quality, socre and value of wine in each state.<br>
+            </li>
+            <li>
+                <h4>Answers to the questions</h4>
+                All questions we ask get answer:
+                <ul>
+                    <li>
+                        <p>Which country produces the most types of wine?</p>
+                        The American produce most types of wine, which is 54,226. 
+                    </li>
+                    <li>
+                        <p>How about wine trade between these countries?</p>
+                        People can get clear information from our Trade Section.
+                    </li>
+                    <li>
+                        <p>Which region produces highest scores/price/value of wine?</p>
+                        In America:
+                        <ul>
+                            <li>Wine prudeced in Rhode Island wins the highest score, which is 90</li>
+                            <li>The average price of Wine produced in California is the highest, which is $39.04</li>
+                            <li>The average price of Wine produced in Ohio is the lowest, which is $13.75</li>
+                            <li>The average value of wine is Idaho, which is 7.34</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <p>Which is the highest scores/cheapest/most expensive wine in a specific region?</p>
+                        You can get this answer through ranking chart.
+                    </li>
+                </ul> 
+            </li>
+            <li>
+                <h4>evaluation of visualization work</h4>
+                Our visualization work very well with no bug. It takes about 0.5 seconds to load the data and will not influence website working.<br>
+            </li>
+            <li>
+                <h4>Future work</h4>
+                <ul>
+                    <li>We want to improve the color on world map. After continue update, we thought the original color design is not suitable now.</li>
+                    <li>We want to improve our code quality, to make them more robust.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="schedule book">
+        <h3>Schedule Book</h3>
+        <ul>
+            <li>Nov  4th: complete the data set wrangling, check the quality of data and choose part of data for the prototype(finished)</li>
+            <li>Nov 11th: geographical map of the whole world and each country for MileStone 1(finished)</li>
+            <li>Nov 18th: ranking charts,percentage chart(finished)</li>
+            <li>Nov 25th: sunburst chart(change to import-export chart and finished)</li>
+            <li>Dec  2nd: all project and fix all the small bug(finished)</li>
+            <li>Dec 15th: evaluation work  and prepare the final presentation(finished)</li>
+            <li>Dec 19th: final presentation(finished)</li>
+        </ul>
+    </div>
+</body>
+</html>

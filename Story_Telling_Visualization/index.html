@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>English Fairy Tales Visualization</title>
+	<script src='https://d3js.org/d3.v4.js'></script>
+	<script src="public/js/RadarChart.js"></script>
+	<link rel="stylesheet" href="public/css/style.css"/>
+	<script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.9.0/d3-legend.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+</head>
+<body>
+	<h1>Analyze Sentiments Of English Fairy Tales</h1>
+	<p class="info">Fairy Tales collected by Joseph Jacobs</p>
+	<div id="listStories-chart" class="view"></div>
+	<div id="mainDiv">
+		<div id="leftDiv">
+			<div id="condegram" class="view">
+				<div id="eCondegram" class="view"></div>
+				<div id="legend" class="view"></div>
+			</div>
+			<div id="eTrendChart" class="view"></div>
+		</div>
+		<!-- <div class="clear"></div> -->
+		<div id="rightDiv">
+			<div id="eRadarChart" class="view"></div>
+			<div id="ePieChart" class="view"></div>
+		</div>
+	</div>
+	<script type="application/javascript" src="public/js/nameChart.js"></script>
+	<script type="application/javascript" src="public/js/lineEmotions.js"></script>
+	<script type="application/javascript" src="public/js/radarSentiment.js"></script>
+	<script type="application/javascript" src="public/js/sentimentPercentage.js"></script>
+	<script type="application/javascript" src="public/js/sentimentTrend.js"></script>
+	<script type="application/javascript" src="public/js/main.js"></script>
+</body>
+</html>

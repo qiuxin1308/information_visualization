@@ -1,0 +1,311 @@
+body {
+	font-family: "avenir next", Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+.fullView{
+    display: inline-block;
+    width: 100%;
+}
+
+/* style for each country boundary line*/
+.countriesLines {
+	fill: none;
+	stroke: #fff;
+	stroke-linejoin: round;
+}
+/* style for the tooltip*/
+.d3-tooltip {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: "avenir next", Arial, sans-serif;
+	padding: 6px;
+	background: rgba(0,0,0,0.6);
+	color: #FFA500;
+	border-radius: 1px;
+	pointer-events: none;
+}
+/*create a small triangle extender for the tooltip*/
+.d3-tooltip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 8px;
+	width: 100%;
+	line-height: 1.5;
+	color: rgba(0,0,0,0.6);
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltip {
+	position: absolute;
+	text-align: left;
+	padding: 2px;
+	font-family: "avenir next", Arial, sans-serif;
+	font-weight: 400;
+	background: rgba(0,0,0,0.6);
+	color: #FFA500;
+	border-radius: 1px;
+	pointer-events: none;
+}
+
+/* css style for the usa map */
+#bubble_content {
+	width: 50%;
+	height: 700px;
+	float: left;
+	padding-top: 15px;
+}
+#pr_charts {
+	width: 50%;
+	height: 600px;
+	float: right;
+	padding-top: 15px;
+}
+
+#percentage_chart {
+	height: 50%;
+	display: inline-block;
+	/*float: left;*/
+}
+
+#ranking_content {
+	height:50%;
+    display: inline-block;
+	width: 500px;
+}
+
+#container {
+	width: 1800px;
+	height: 1500px;
+
+}
+
+#left_side {
+	width: 20%;
+	height: 830px;
+	display: inline-block;
+	float: left;
+	background-color: #EEE7DF; 
+	/*#EEE7DF*/
+}
+#content {
+	display: inline-block;
+	height: 1500px;
+	width: 80%;
+	float: right;
+	/*background-color: #eaeeef;*/
+}
+#left_chart {
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+
+#right_pieChart {
+	width: 50%;
+	display: inline-block;
+	float: right;
+}
+
+.buttonText{
+	text-anchor:middle;
+	font-size: 15px;
+}
+
+#winePerChart {
+	-webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.labelName tspan {
+	font-style: normal;
+    font-weight: 700;
+    font-size: 0.8em;
+    font-family: Arial black;
+}
+
+.labelName {
+    font-size: 0.8em;
+    font-style: italic;
+    font-family: Lato;
+}
+
+h2 {
+	text-align: center;
+}
+
+/*#world_map {
+	border: 1px solid #000;	
+}*/
+
+
+.axis { 
+	font-size: 12px; 
+}
+
+/*div {
+	border: 1px solid #000;
+}*/
+#content{
+	height: 800px;
+}
+
+#world_map {
+	display: inline-block;
+	float: left;
+}
+
+#top_selection {
+	height: 15%;
+}
+#analysis_charts {
+	height:85%;
+}
+
+/* this is the style for the chord diagram */
+.group path {
+	stroke: #000;
+	stroke-width: .25px;
+	fill-opacity: 0.9;
+}
+
+path.chord {
+	stroke: #000;
+	stroke-width:.25px;
+	fill-opacity: 0.9;
+}
+
+path.fade {
+	display: none;
+}
+
+#trade_view {
+	float: left;
+	width: 58%;
+}
+
+#trade_legend {
+	float: right;
+	width: 42%;
+}
+
+#trade_barChart {
+	float: left;
+	width: 45%;
+}
+
+#trade_aster {
+	float: right;
+	width: 55%;
+}
+
+/* tool tip for aster */
+.d3_tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3_tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3_tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.solidArc:hover {
+  fill: orangered ;
+}
+
+.solidArc {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.titleStyle {
+	font-family: Aleo;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.contentTitleStyle {
+	font-family: Titillium Web;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#asterView {
+	float: left;
+	width: 75%;
+}
+
+#asterLegend {
+	float: right;
+	width: 25%;
+}
+
+#arrow {
+	transform: rotate(135deg);
+  	-webkit-transform: rotate(135deg);
+}
+
+#leftarrow {
+	font-family: Aleo;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#the_arrow{
+	transform: rotate(135deg);
+  	-webkit-transform: rotate(135deg);
+}
+
+#the_leftarrow {
+	font-family: Aleo;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+#trade_charts {
+	padding-top: 40px;
+}
+
+#imex_btn {
+	padding-top: 20px;
+}

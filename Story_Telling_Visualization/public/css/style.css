@@ -1,0 +1,137 @@
+body {
+	font-family: Rancho;
+}
+
+h1 {
+	font-family: "Rancho";
+	font-size: 40px;
+	color: #464646;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 20px;
+}
+
+.info {
+	margin-left: 26px;
+}
+
+.d3-tip {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	border-style: groove;
+	background: #FFFFFF;
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+	pointer-events: none;
+	text-align: center;
+	font: 10px Arial black;
+}
+#mainDiv{
+	width: 1500px;
+	height: 1000px;
+	/*position: relative;*/
+}
+
+#leftDiv{
+	float: left;
+	width: 55%;
+	height: 1000px;
+	border-right: 2px dashed rgba(128,128,128, 0.6);
+	position: relative;
+}
+
+#rightDiv{
+	float: right;
+	width: 40%;
+	height: 1000px;
+	padding-left: 50px;
+	padding-top: 30px;
+	/*position: absolute;*/
+	/*right: 0;*/
+}
+
+#condegram{
+	float: top;
+	height: 60%;
+}
+
+#eHeatMap{
+	float: bottom;
+	height: 40%;
+}
+
+#eCondegram{
+	float: left;
+	width: 67%;
+}
+
+#legend{
+	float: right;
+	width: 33%;
+}
+.axis {
+  font: 15px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+.toolTip {
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  min-width: 50px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  padding: 9px 14px 6px 14px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 1.3;
+  color: #5B6770;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, .15);
+}
+.toolTip:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -12px;
+}  
+.toolTip span {
+  font-weight: 500;
+  color: #081F2C;
+}
+
+#sentiPerChart {
+	-webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.labelName tspan {
+	font-style: normal;
+    font-weight: 700;
+    font-size: 0.8em;
+    font-family: Arial black;
+}
+
+.labelName {
+    font-size: 0.8em;
+    font-style: italic;
+    font-family: Lato;
+}
